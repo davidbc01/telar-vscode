@@ -1,0 +1,44 @@
+{
+    "comments": {
+        "lineComment": "#"
+    },
+    "brackets": [
+        [
+            "{",
+            "}"
+        ],
+        [
+            "[",
+            "]"
+        ],
+        [
+            "(",
+            ")"
+        ]
+    ],
+    "autoClosingPairs": [
+        {
+            "open": "\"",
+            "close": "\""
+        },
+        {
+            "open": "(",
+            "close": ")"
+        }
+    ],
+    "surroundingPairs": [
+        {
+            "open": "\"",
+            "close": "\""
+        },
+        {
+            "open": "(",
+            "close": ")"
+        }
+    ],
+    "indentationRules": {
+        "increaseIndentPattern": "^(aplicación|aplicacion|página|pagina|datos|si|mostrar|botón|boton).*$",
+        "decreaseIndentPattern": "^\\s*$"
+    },
+    "wordPattern": "[a-záéíóúüñA-ZÁÉÍÓÚÜÑ0-9_]+"
+}

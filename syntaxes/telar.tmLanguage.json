@@ -1,0 +1,89 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Telar",
+	"scopeName": "source.telar",
+	"fileTypes": [
+		"telar"
+	],
+	"patterns": [
+		{
+      		"include": "#comentarios"
+		},
+		{
+			"include": "#textos"
+		},
+		{
+			"include": "#numeros"
+		},
+		{
+			"include": "#palabras-clave-estructura"
+		},
+		{
+			"include": "#palabras-clave-contenido"
+		},
+		{
+			"include": "#palabras-clave-logica"
+		},
+		{
+			"include": "#palabras-clave-modificadores"
+		},
+		{
+			"include": "#nombres-propios"
+		},
+		{
+			"include": "#operadores"
+		},
+		{
+			"include": "#identificadores"
+		}
+	],
+	"repository": {
+		"comentarios": {
+			"name": "comment.line.hash.telar",
+			"match": "#.*$"
+		},
+		"textos": {
+			"name": "string.quoted.double.telar",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.telar",
+					"match": "\\\\."
+				}
+			]
+		},
+		"numeros": {
+			"name": "constant.numeric.telar",
+			"match": "\\b[0-9]+(\\.[0-9]+)?\\b"
+		},
+		"palabras-clave-estructura": {
+			"name": "keyword.control.telar",
+			"match": "\\b(aplicación|aplicacion|página|pagina|datos|en|idioma)\\b"
+		},
+		"palabras-clave-contenido": {
+			"name": "keyword.other.content.telar",
+			"match": "\\b(título|titulo|descripción|descripcion|mostrar|botón|boton|campo|tipo)\\b"
+		},
+		"palabras-clave-logica": {
+			"name": "keyword.control.flow.telar",
+			"match": "\\b(si|no|el|la|está|esta|es|hay|falla|funciona)\\b"
+		},
+		"palabras-clave-modificadores": {
+			"name": "keyword.other.modifier.telar",
+			"match": "\\b(máximo|maximo|ordenados|filtrados|por|recientes|para|móvil|movil|caché|cache|reintentar|minutos|horas|segundos|optimizar|ir|hacer|a)\\b"
+		},
+		"nombres-propios": {
+			"name": "entity.name.type.telar",
+			"match": "\\b[A-ZÁÉÍÓÚÜÑ][a-záéíóúüñA-ZÁÉÍÓÚÜÑ0-9]*\\b"
+		},
+		"operadores": {
+			"name": "keyword.operator.telar",
+			"match": "[><=:]"
+		},
+		"identificadores": {
+			"name": "variable.other.telar",
+			"match": "\\b[a-záéíóúüñ][a-záéíóúüñA-ZÁÉÍÓÚÜÑ0-9]*(\\.[a-záéíóúüñ][a-záéíóúüñA-ZÁÉÍÓÚÜÑ0-9]*)*\\b"
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+  "name": "telar",
+  "displayName": "Telar",
+  "description": "Soporte para el lenguaje Telar",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.110.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "telar",
+      "aliases": ["Telar", "telar"],
+      "extensions": [".telar"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "telar",
+      "scopeName": "source.telar",
+      "path": "./syntaxes/telar.tmLanguage.json"
+    }]
+  }
+}
